@@ -34,9 +34,8 @@ Vagrant.configure("2") do |config|
 
     su postgres -c 'createuser -dRS vagrant'
     su vagrant -c 'createdb'
-    su vagrant -c 'createdb news'
-    su vagrant -c 'createdb forum'
-    su vagrant -c 'psql forum -f /vagrant/forum/forum.sql'
+    su vagrant -c 'createdb newsdata'
+    su vagrant -c 'psql newsdata -f /vagrant/newsdata.sql'
 
     vagrantTip="[35m[1mThe shared directory is located at /vagrant\\nTo access your shared files: cd /vagrant[m"
     echo -e $vagrantTip > /etc/motd
