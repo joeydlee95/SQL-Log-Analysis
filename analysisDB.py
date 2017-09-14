@@ -11,11 +11,14 @@ def get_mostviewed():
     """Gets the row with the article and number of views it got."""
     db = psycopg2.connect(database=DBNAME)
     c = db.cursor()
-    c.execute("select path, count(path) \
-               from log \
+
+    # Gets (title, total views)
+    c.execute("select title, count(path) as views \
+               from log left join articles \
+               on log.path LIKE '%' || articles.slug \
                where log.path LIKE '/article/%' \
-               group by path \
-               order by count(path) desc \
+               group by title \
+               order by views desc \
                limit 1;")
     posts = c.fetchone()
     db.close()
