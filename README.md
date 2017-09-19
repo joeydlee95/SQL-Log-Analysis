@@ -8,12 +8,17 @@ This is a reporting tool that uses an existing database with over a million rows
 * What are the most popular three articles of all time?
 * Who are the most popular article authors of all time?
 * On which days did more than 1% of requests lead to errors?
+
+## Requirements
+ - You need to have Vagrant and VirtualBox 
+ * https://www.vagrantup.com/
+ * https://www.virtualbox.org/wiki/Downloads
     
 ## How to Run
-1. vagrant up
-2. vagrant ssh
-3. cd /vagrant
-4. unzip the newsdata.zip
+1. unzip the newsdata.zip
+2. vagrant up
+3. vagrant ssh
+4. cd /vagrant
 5. run "python analysis.py"
 
 
