@@ -15,11 +15,13 @@ This is a reporting tool that uses an existing database with over a million rows
  * https://www.virtualbox.org/wiki/Downloads
     
 ## How to Run
-1. unzip the newsdata.zip
-2. vagrant up
-3. vagrant ssh
-4. cd /vagrant
-5. run "python analysis.py"
+1. git clone https://github.com/joeydlee95/log-analysis log-analysis
+2. cd log-analysis
+3. unzip the newsdata.zip (unzip newsdata.zip)
+4. vagrant up
+5. vagrant ssh
+6. cd /vagrant
+7. run "python analysis.py"
 
 
 ## Files
